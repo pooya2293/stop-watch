@@ -1,0 +1,248 @@
+
+/************************************/
+
+/*body:
+- giv the body element relative position for the scroll spy work
+-add font family for whole page*/
+/*make video bg less than window screen*/
+body {
+margin:0;
+padding: 0;
+background:url(https://freenaturestock.com/wp-content/uploads/freenaturestock-95.jpeg) no-repeat center center ;
+padding-top:10%;
+}
+
+/* *video: 
+-set the video background, make it fixed 
+-make sure it aperans behind all elements
+-make it seperate across  the whole web pages*/
+
+#bgvideo {
+	position: fixed;
+	min-height:90%;
+	min-width:99%;
+	filter: blur(4px);
+	z-index: -100;
+
+	
+}
+
+/*video does not work in smal devises
+-Hide the video and set the pictiure as bg use (@media)
+-make it seperate across  the whole web pages*/
+
+/*navigation:
+-style the navbar*/
+
+
+/*-logo*/
+.logo {
+width:12%;
+margin:-1.2% 40%;
+
+}
+
+.navbar-header {
+	margin:0 -90px;
+}
+
+.navbar-toggle{
+	right:12%;
+}
+/*Home style: */
+.jumbotron {
+	background: transparent;
+	text-align: center;
+	margin-top:50px;
+}
+
+/*-btn*/
+.jumbotron .btn{
+	margin-top:10%;
+	background-color:rgba(0,0,0,0.6);
+	padding:10px 20px;
+	color:#fff;
+	border-radius:0;
+	font-size:16px;
+}
+
+.jumbotron .btn:hover {
+
+	background-color:rgba(0,0,0,0.09);
+	border:solid 1px;
+	color: #2b2323;
+	font-weight: bold;
+	font-size:17.5px;
+}
+
+
+/*about section:*/
+
+#image1 {
+	margin-left:30px;
+}
+
+#about {
+	text-align: center;
+	margin-top:100px;
+}
+
+#about img{
+	height:200px;
+	margin-top:50px;
+}
+
+/*-carousl items*/
+
+#Carousel {
+	margin-top:120px;
+	
+}
+
+#myCarousel{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.carousel-indicators {
+	margin:20% -28.9%;
+}
+
+.carousel-caption {
+	position: relative;
+	left:auto;
+	right:auto;
+	height:100px;
+	color:black;
+}
+
+
+/*neshanegar slide show*/
+
+.carousel-indicators {
+    margin: 4% -27%;
+    height: 20%;
+}
+
+    .carousel-indicators ol {
+        width: 100%;
+    }
+
+
+    .carousel-indicators li{
+        height: 5px !important;
+        border-radius: 20px !important;
+        width: 5px;
+
+    }
+
+    ol.carousel-indicators li.active {
+  background: #FFF;
+  width: 5px;
+  padding:3px;
+
+}
+
+
+/*carousel-control*/
+.glyphicon {
+	margin:-85% -45% !important; 
+}
+
+
+
+
+
+
+/*media*/
+
+@media (max-width:1000px){
+
+	.carousel-indicators {
+    	margin: 10% -27%;
+    	height: 20%;
+	}
+
+}
+
+@media (max-width:780px){
+
+	.carousel-indicators {
+    	margin: 19.4% -27%;
+    	height: 20%;
+	}
+
+}
+
+
+
+@media (max-width:600px){
+
+	.navbar-toggle{
+	right:16.4%;
+	}
+
+	#myCarousel{
+	width: 100%;
+	margin: 0 0%;
+	}
+	.carousel-caption {
+	position: relative;
+	left:auto;
+	right:auto;
+	height:70px;
+
+}
+
+	.carousel-caption h2{
+		font-size:20px;
+	}
+
+	.carousel-indicators {
+    	margin: 11% -27%;
+    	height: 20%;
+	}
+
+
+   
+}
+
+@media (max-width:380px){
+
+.navbar-toggle{
+	right:22%;
+}
+	
+/*slidebar*/
+	#myCarousel{
+	width: 100%;
+	margin: 0 0;
+	}
+	.carousel-caption {
+	position: relative;
+	left:auto;
+	right:auto;
+	height:60px;
+
+}
+
+	.carousel-caption h2{
+		font-size:17px;
+	}
+
+	.container h1,h2 {
+		font-size:26px;
+	}
+/*slideShow neshangar*/
+	.carousel-indicators {
+    	margin: 10% -27%;
+    	height: 20%;
+	}
+
+
+
+}
+/*footer srtle*/
+
+
+/************************************/
