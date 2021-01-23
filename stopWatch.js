@@ -58,7 +58,10 @@ $(function(){
 
 	//update time change counter to min sec centiSec 
 	function timeUpdate(){
-		// min=60*100centiseconds=6000centiseconds
-		timeCounter = math_floor(timeCounter/6000);
+		// 1min=60*100centiseconds=6000centiseconds
+		timeMinutes = math_floor(timeCounter/6000);
+		// 1sec=100centiseconds
+		timeSeconds = math_floor((timeCounter%6000)/100);
+		timeCentiseconds = (timeCounter%6000)%100
 	} 
 });
