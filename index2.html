@@ -11,7 +11,7 @@
     <!-- saved from url=(0023)http://www.contoso.com/ -->
     <!-- saved from url=(0014)about:internet -->
 
-    <title>company website</title>
+    <title>StopWatch App</title>
 
     <!-- Bootstrap  link files -->
     <!-- <link  href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,37 @@
 
     <!-- ********************** -->
 
+    <!-- tittle -->
+    <div class="container-fluid">
+      <div id="header">
+        <p>Stop Watch</p>
+      </div>
+      <!-- time lap -->
+      <div id="timeLap"><span id="lapMinutes">00</span>:<span id="lapSecense">00</span>:<span id="lapcentiSecense">00</span></div>
 
+      <!-- time -->
+      <div id="time"><span id="timeMinutes">00</span>:<span id="timeSecense">00</span>:<span id="timecentiSecense">00</span></div>
+
+      <!-- controls buttons -->
+      <div id="controlsContainer" class="row">
+        <div class="col-xs-2 col-xs-offset-4">
+          <div id="startButton" class="control">Start</div>
+          <div id="stopButton" class="control">Stop</div>
+          <div id="resumeButton" class="control">Resume</div>
+        </div>
+        <div class="col-xs-2">
+          <div id="lapButton" class="control">Lap</div>
+          <div id="resetButton" class="control">Reset</div>
+        </div>
+      </div>
+
+      <!-- Laps -->
+      <div id="laps">
+        
+      </div>
+    </div>
+
+    
     <!-- ********************** -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
