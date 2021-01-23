@@ -64,18 +64,27 @@ $(function(){
 		timeSeconds = Math.floor((timeCounter%6000)/100);
 		timeCentiseconds = (timeCounter%6000)%100;
 		// link js code To HTML code
-		$("#timeMinutes").text(timeMinutes);
-		$("#timeSecense").text(timeSeconds);
-		$("#timecentiSecense").text(timeCentiseconds);
+		$("#timeMinutes").text(Format(timeMinutes));
+		$("#timeSecense").text(Format(timeSeconds));
+		$("#timecentiSecense").text(Format(timeCentiseconds));
 		// 1min=60*100centiseconds=6000centiseconds
 		lapMinutes = Math.floor(lapCounter/6000);
 		// 1sec=100centiseconds
 		lapSeconds = Math.floor((lapCounter%6000)/100);
 		lapCentiseconds = (lapCounter%6000)%100;
 		// link js code To HTML code
-		$("#lapMinutes").text(lapMinutes);
-		$("#lapSecense").text(lapSeconds);
-		$("#lapcentiSecense").text(lapCentiseconds);
+		$("#lapMinutes").text(Format(lapMinutes));
+		$("#lapSecense").text(Format(lapSeconds));
+		$("#lapcentiSecense").text(Format(lapCentiseconds));
 	} 
+
+	//format of number 1 to 01
+	function Format(number){
+		if(number<10){
+			return "0"+number;
+		}else{
+			return number;
+		}
+	}
 
 });
