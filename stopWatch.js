@@ -18,7 +18,7 @@ $(function(){
 		//show stop and lap buttons
 		hidesshowbuttons("#stopButton","#lapButton");		
 		//start counter
-		
+		startAction();
 
 	});
 		
@@ -59,9 +59,23 @@ $(function(){
 	//update time change counter to min sec centiSec 
 	function timeUpdate(){
 		// 1min=60*100centiseconds=6000centiseconds
-		timeMinutes = math_floor(timeCounter/6000);
+		timeMinutes = Math.floor(timeCounter/6000);
 		// 1sec=100centiseconds
-		timeSeconds = math_floor((timeCounter%6000)/100);
-		timeCentiseconds = (timeCounter%6000)%100
+		timeSeconds = Math.floor((timeCounter%6000)/100);
+		timeCentiseconds = (timeCounter%6000)%100;
+		// link js code To HTML code
+		$("#timeMinutes").text(timeMinutes);
+		$("#timeSecense").text(timeSeconds);
+		$("#timecentiSecense").text(timeCentiseconds);
+		// 1min=60*100centiseconds=6000centiseconds
+		lapMinutes = Math.floor(lapCounter/6000);
+		// 1sec=100centiseconds
+		lapSeconds = Math.floor((lapCounter%6000)/100);
+		lapCentiseconds = (lapCounter%6000)%100;
+		// link js code To HTML code
+		$("#lapMinutes").text(lapMinutes);
+		$("#lapSecense").text(lapSeconds);
+		$("#lapcentiSecense").text(lapCentiseconds);
 	} 
+
 });
