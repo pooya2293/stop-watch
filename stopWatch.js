@@ -23,11 +23,17 @@ $(function(){
 	});
 		
 	//click on stop button
+	$('#stopButton').click(function(){
 		//show resume and reset button
+		hidesshowbuttons("#resumeButton","#resetButton");
+	});
 		//stop counter
 	
 	//click on resume button
+	$('#resumeButton').click(function(){
 		//show stop and lap button
+		hidesshowbuttons("#stopButton","#lapButton");
+	});
 		//start action
 		
 	//click on reset button
@@ -40,57 +46,57 @@ $(function(){
 			// start action
 			
 	//functions
-	//show buttons  
-	function hidesshowbuttons(x,y){
-		$('.control').hide();
-		$(x).show();
-		$(y).show();
-	}
-	
-	//start counter
-	function startAction(){
-		action = setInterval(function(){
-			timeCounter ++;	
-			if(timeCounter == 100*60*100){
-				timeCounter = 0;}
-			
-			lapCounter ++;
-			if(lapCounter == 100*60*100){
-				lapCounter = 0;}
-			
-			timeUpdate();
-		},10)	
-	} 
-
-	//update time change counter to min sec centiSec 
-	function timeUpdate(){
-		// 1min=60*100centiseconds=6000centiseconds
-		timeMinutes = Math.floor(timeCounter/6000);
-		// 1sec=100centiseconds
-		timeSeconds = Math.floor((timeCounter%6000)/100);
-		timeCentiseconds = (timeCounter%6000)%100;
-		// link js code To HTML code
-		$("#timeMinutes").text(Format(timeMinutes));
-		$("#timeSecense").text(Format(timeSeconds));
-		$("#timecentiSecense").text(Format(timeCentiseconds));
-		// 1min=60*100centiseconds=6000centiseconds
-		lapMinutes = Math.floor(lapCounter/6000);
-		// 1sec=100centiseconds
-		lapSeconds = Math.floor((lapCounter%6000)/100);
-		lapCentiseconds = (lapCounter%6000)%100;
-		// link js code To HTML code
-		$("#lapMinutes").text(Format(lapMinutes));
-		$("#lapSecense").text(Format(lapSeconds));
-		$("#lapcentiSecense").text(Format(lapCentiseconds));
-	} 
-
-	//format of number 1 to 01
-	function Format(number){
-		if(number<10){
-			return "0"+number;
-		}else{
-			return number;
+		//show buttons  
+		function hidesshowbuttons(x,y){
+			$('.control').hide();
+			$(x).show();
+			$(y).show();
 		}
-	}
+		
+		//start counter
+		function startAction(){
+			action = setInterval(function(){
+				timeCounter ++;	
+				if(timeCounter == 100*60*100){
+					timeCounter = 0;}
+				
+				lapCounter ++;
+				if(lapCounter == 100*60*100){
+					lapCounter = 0;}
+				
+				timeUpdate();
+			},10)	
+		} 
+
+		//update time change counter to min sec centiSec 
+		function timeUpdate(){
+			// 1min=60*100centiseconds=6000centiseconds
+			timeMinutes = Math.floor(timeCounter/6000);
+			// 1sec=100centiseconds
+			timeSeconds = Math.floor((timeCounter%6000)/100);
+			timeCentiseconds = (timeCounter%6000)%100;
+			// link js code To HTML code
+			$("#timeMinutes").text(Format(timeMinutes));
+			$("#timeSecense").text(Format(timeSeconds));
+			$("#timecentiSecense").text(Format(timeCentiseconds));
+			// 1min=60*100centiseconds=6000centiseconds
+			lapMinutes = Math.floor(lapCounter/6000);
+			// 1sec=100centiseconds
+			lapSeconds = Math.floor((lapCounter%6000)/100);
+			lapCentiseconds = (lapCounter%6000)%100;
+			// link js code To HTML code
+			$("#lapMinutes").text(Format(lapMinutes));
+			$("#lapSecense").text(Format(lapSeconds));
+			$("#lapcentiSecense").text(Format(lapCentiseconds));
+		} 
+
+		//format of number 1 to 01
+		function Format(number){
+			if(number<10){
+				return "0"+number;
+			}else{
+				return number;
+			}
+		}
 
 });
