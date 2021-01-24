@@ -7,7 +7,8 @@ $(function(){
 		var lapNumber = 0;//number of laps
 		//minutes,seconds,centiseconds for items and lap
 		var timeMinutes, timeSeconds, timeCentiseconds, lapMinutes, lapSeconds, lapCentiseconds;
-
+		// i --> lap number in lapBox
+		var i = 0; 
 	//on app load show start and lap buttons
 	hidesshowbuttons("#startButton","#lapButton");
 
@@ -44,11 +45,20 @@ $(function(){
 	});
 		
 	// click on lap button
+	$('#lapButton').click(function(){
 		// if mode is ON
+		if(mode) {
 			// stop action
+			clearInterval(action);
 			// reset lap and print lap details
+			lapCounter = 0;
+			addLap();
 			// start action
+			startAction();
 			
+
+		}
+	});
 	//functions
 		//show buttons  
 		function hidesshowbuttons(x,y){
@@ -101,6 +111,28 @@ $(function(){
 			}else{
 				return number;
 			}
+		}
+
+		// addLap function:print Lap detail inside lap box
+		function addLap(){
+			i++;
+			var myLapDetail ='<div>'+
+				'<div>'+
+					'Lap'+ i +
+				'</div>'+
+				'<div>' +
+					'<span>' +
+						Format(lapMinutes) +
+					'</span>' +
+					':<span>' +
+						Format(lapSeconds) +
+					'</span>' +
+					':<span>' +
+						Format(lapCentiseconds) +
+					'</span>' +
+				'</div>' +
+			'</div>';
+			$(myLapDetail).appendTo('#laps');		
 		}
 
 });
