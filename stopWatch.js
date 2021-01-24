@@ -116,11 +116,11 @@ $(function(){
 		// addLap function:print Lap detail inside lap box
 		function addLap(){
 			i++;
-			var myLapDetail ='<div>'+
-				'<div>'+
+			var myLapDetail ='<div class="lap">'+
+				'<div class="lapTimeTittle">'+
 					'Lap'+ i +
 				'</div>'+
-				'<div>' +
+				'<div class="lapTime">' +
 					'<span>' +
 						Format(lapMinutes) +
 					'</span>' +
