@@ -26,15 +26,16 @@ $(function(){
 	$('#stopButton').click(function(){
 		//show resume and reset button
 		hidesshowbuttons("#resumeButton","#resetButton");
-	});
 		//stop counter
-	
+		clearInterval(action);	
+	});
 	//click on resume button
 	$('#resumeButton').click(function(){
 		//show stop and lap button
 		hidesshowbuttons("#stopButton","#lapButton");
-	});
 		//start action
+		startAction();
+	});
 		
 	//click on reset button
 		//reload the page
