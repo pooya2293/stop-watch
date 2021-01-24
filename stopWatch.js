@@ -38,7 +38,10 @@ $(function(){
 	});
 		
 	//click on reset button
+	$('#resetButton').click(function(){
 		//reload the page
+		location.reload()
+	});
 		
 	// click on lap button
 		// if mode is ON
