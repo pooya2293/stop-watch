@@ -59,55 +59,16 @@ body {
 }
 
 .lapTimeTittle {
-	padding:0 10px;
+	padding:20px 10px 10px 0;
+	height:40px;
 	margin:0 0;
 	color:#2b2828;
 }
 
 .lapTime{
-	padding:0 10px;
-	margin:0 89vw;
+	padding:2px 10px;
+	margin:-5% 1vw;
+	float:right;
 	color:#2b2828;	
 }
 
-@media (max-width : 402px){
-	.lapTimeTittle {
-	padding:0 10px;
-	margin:0 0;
-	color:#2b2828;
-}
-
-.lapTime{
-	padding:0 2px;
-	margin:0 67vw;
-	color:#2b2828;	
-}
-}
-
-@media (min-width : 403px) and (max-width : 700px){
-	.lapTimeTittle {
-	padding:0 10px;
-	margin:0 0;
-	color:#2b2828;
-}
-
-.lapTime{
-	padding:0 2px;
-	margin:0 78vw;
-	color:#2b2828;	
-}
-}
-
-@media (min-width : 704px) and (max-width : 1000px){
-	.lapTimeTittle {
-	padding:0 10px;
-	margin:0 0;
-	color:#2b2828;
-}
-
-.lapTime{
-	padding:0 2px;
-	margin:0 87vw;
-	color:#2b2828;	
-}
-}
