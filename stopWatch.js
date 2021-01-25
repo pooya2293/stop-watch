@@ -132,7 +132,7 @@ $(function(){
 					'</span>' +
 				'</div>' +
 			'</div>';
-			$(myLapDetail).appendTo('#laps');		
+			$(myLapDetail).prependTo('#laps');		
 		}
 
 });
